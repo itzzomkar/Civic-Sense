@@ -1,3 +1,4 @@
+
 CivicConnect is a web application that helps citizens report civic problems they face in their daily lives, such as potholes, damaged roads, broken streetlights, water leaks, or garbage overflow.
 
 With this platform, people can take and upload photos of the issue, describe it using text or voice, and automatically tag the location with GPS. The system routes the issue to the right government department using AI-based categorization. Citizens can also track their report's status and receive updates throughout the resolution process. On the government side, staff can manage, assign, and resolve issues through a centralized dashboard.
