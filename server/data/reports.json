@@ -1,0 +1,128 @@
+[
+  {
+    "_id": "demo1",
+    "title": "Large pothole on NH-33",
+    "description": "Deep pothole causing traffic near Kathal More, Ranchi.",
+    "category": "Road Maintenance",
+    "priority": "high",
+    "status": "in-progress",
+    "userId": "demo-user-1",
+    "isPublic": true,
+    "location": {
+      "address": "Kathal More, Ranchi, Jharkhand",
+      "city": "Ranchi",
+      "state": "Jharkhand",
+      "coordinates": { "lat": 23.3185, "lng": 85.2513 }
+    },
+    "upvotes": [
+      { "userId": "demo-user-2", "createdAt": "2025-09-21T09:30:00.000Z" }
+    ],
+    "comments": [
+      { "userId": "demo-user-2", "text": "I've seen this pothole too, it's really dangerous!", "createdAt": "2025-09-21T09:30:00.000Z" }
+    ],
+    "statusHistory": [],
+    "createdAt": "2025-09-20T09:00:00.000Z",
+    "updatedAt": "2025-09-21T10:00:00.000Z"
+  },
+  {
+    "_id": "demo2",
+    "title": "Streetlights not working",
+    "description": "Multiple lights are out near Bistupur Main Rd, creating safety issues.",
+    "category": "Lighting",
+    "priority": "medium",
+    "status": "pending",
+    "userId": "demo-user-2",
+    "isPublic": true,
+    "location": {
+      "address": "Bistupur Main Rd, Jamshedpur, Jharkhand",
+      "city": "Jamshedpur",
+      "state": "Jharkhand",
+      "coordinates": { "lat": 22.7937, "lng": 86.1836 }
+    },
+    "upvotes": [
+      { "userId": "demo-user-1", "createdAt": "2025-09-18T14:15:00.000Z" },
+      { "userId": "demo-user-3", "createdAt": "2025-09-19T08:20:00.000Z" }
+    ],
+    "comments": [],
+    "statusHistory": [],
+    "createdAt": "2025-09-18T12:00:00.000Z",
+    "updatedAt": "2025-09-18T12:00:00.000Z"
+  },
+  {
+    "_id": "demo3",
+    "title": "Garbage pile near bank",
+    "description": "Overflowing garbage near Bank More causing foul smell.",
+    "category": "Waste Management",
+    "priority": "urgent",
+    "status": "resolved",
+    "userId": "demo-user-3",
+    "isPublic": true,
+    "location": {
+      "address": "Bank More, Dhanbad, Jharkhand",
+      "city": "Dhanbad",
+      "state": "Jharkhand",
+      "coordinates": { "lat": 23.7957, "lng": 86.4304 }
+    },
+    "upvotes": [
+      { "userId": "demo-user-1", "createdAt": "2025-09-17T10:00:00.000Z" },
+      { "userId": "demo-user-2", "createdAt": "2025-09-17T11:30:00.000Z" }
+    ],
+    "comments": [
+      { "userId": "demo-user-1", "text": "Great that this got resolved quickly!", "createdAt": "2025-09-22T12:00:00.000Z" }
+    ],
+    "statusHistory": [],
+    "createdAt": "2025-09-17T08:30:00.000Z",
+    "updatedAt": "2025-09-17T08:30:00.000Z"
+  },
+  {
+    "_id": "demo4",
+    "title": "Water logging during monsoon",
+    "description": "Severe water logging at Circular Road during heavy rains, making it impassable.",
+    "category": "Water & Utilities",
+    "priority": "high",
+    "status": "pending",
+    "userId": "demo-user-1",
+    "isPublic": true,
+    "location": {
+      "address": "Circular Road, Ranchi, Jharkhand",
+      "city": "Ranchi",
+      "state": "Jharkhand",
+      "coordinates": { "lat": 23.3441, "lng": 85.3096 }
+    },
+    "upvotes": [
+      { "userId": "demo-user-3", "createdAt": "2025-09-22T16:45:00.000Z" }
+    ],
+    "comments": [
+      { "userId": "demo-user-3", "text": "Same issue near my area too!", "createdAt": "2025-09-22T16:45:00.000Z" }
+    ],
+    "statusHistory": [],
+    "createdAt": "2025-09-22T14:30:00.000Z",
+    "updatedAt": "2025-09-22T16:45:00.000Z"
+  },
+  {
+    "_id": "demo5",
+    "title": "Broken traffic signal",
+    "description": "Traffic signal at Main Road crossing is not working, causing traffic congestion.",
+    "category": "Traffic",
+    "priority": "urgent",
+    "status": "in-progress",
+    "userId": "demo-user-2",
+    "isPublic": true,
+    "location": {
+      "address": "Main Road Crossing, Jamshedpur, Jharkhand",
+      "city": "Jamshedpur",
+      "state": "Jharkhand",
+      "coordinates": { "lat": 22.8046, "lng": 86.2029 }
+    },
+    "upvotes": [
+      { "userId": "demo-user-1", "createdAt": "2025-09-23T08:15:00.000Z" },
+      { "userId": "demo-user-3", "createdAt": "2025-09-23T10:30:00.000Z" }
+    ],
+    "comments": [
+      { "userId": "demo-user-1", "text": "This needs immediate attention during office hours!", "createdAt": "2025-09-23T08:15:00.000Z" }
+    ],
+    "statusHistory": [],
+    "createdAt": "2025-09-23T07:00:00.000Z",
+    "updatedAt": "2025-09-23T10:30:00.000Z"
+  }
+]

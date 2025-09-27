@@ -1,0 +1,92 @@
+{
+  "name": "Urban Guardians - Smart India Hackathon 2025",
+  "short_name": "Urban Guardians",
+  "description": "AI-powered civic issue reporting system with weather integration, QR codes, and blockchain transparency - Smart India Hackathon 2025",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["government", "utilities", "productivity"],
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon.svg",
+      "sizes": "144x144 192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Report Issue",
+      "short_name": "Report",
+      "description": "Quickly report a civic issue",
+      "url": "/?action=report",
+      "icons": [
+        {
+          "src": "/icons/report-shortcut.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "My Reports",
+      "short_name": "My Reports",
+      "description": "View your submitted reports",
+      "url": "/?action=my-reports",
+      "icons": [
+        {
+          "src": "/icons/reports-shortcut.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Community Feed",
+      "short_name": "Community",
+      "description": "View local community reports",
+      "url": "/?action=community",
+      "icons": [
+        {
+          "src": "/icons/community-shortcut.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/mobile-home.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshots/tablet-dashboard.png",
+      "sizes": "1024x768",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://urban-guardians.vercel.app/manifest.json"
+    }
+  ],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 480
+  },
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  }
+}

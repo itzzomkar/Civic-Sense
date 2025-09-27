@@ -1,0 +1,117 @@
+{
+  "exportedAt": "2025-09-12T21:19:23.844Z",
+  "database": "urban_guardians",
+  "statistics": {
+    "totalUsers": 2,
+    "totalReports": 3,
+    "pendingReports": 2,
+    "inProgressReports": 1,
+    "resolvedReports": 0
+  },
+  "users": [
+    {
+      "id": "68c48e2a6ab605f4f85492a5",
+      "name": "Rahul Kumar",
+      "email": "rahul@example.com",
+      "role": "citizen",
+      "civicPoints": 0,
+      "location": {
+        "city": "Mumbai",
+        "state": "Maharashtra"
+      },
+      "createdAt": "2025-09-12T21:18:34.531Z",
+      "stats": {
+        "totalReports": 0,
+        "resolvedReports": 0,
+        "pendingReports": 0,
+        "upvotesReceived": 0
+      }
+    },
+    {
+      "id": "68c48e2a6ab605f4f85492a8",
+      "name": "Admin User",
+      "email": "admin@urbanguardians.com",
+      "role": "admin",
+      "civicPoints": 0,
+      "location": {
+        "city": "Delhi",
+        "state": "Delhi"
+      },
+      "createdAt": "2025-09-12T21:18:34.620Z",
+      "stats": {
+        "totalReports": 0,
+        "resolvedReports": 0,
+        "pendingReports": 0,
+        "upvotesReceived": 0
+      }
+    }
+  ],
+  "reports": [
+    {
+      "id": "68c48e2a6ab605f4f85492ac",
+      "title": "Pothole on MG Road",
+      "description": "Large pothole causing traffic issues near the main junction. Multiple vehicles have been damaged.",
+      "category": "Road Maintenance",
+      "status": "pending",
+      "priority": "high",
+      "location": {
+        "address": "MG Road, Near City Mall",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "coordinates": {
+          "lat": 19.076,
+          "lng": 72.8777
+        }
+      },
+      "reportedBy": "Rahul Kumar (rahul@example.com)",
+      "upvotes": 0,
+      "comments": 0,
+      "createdAt": "2025-09-12T21:18:34.697Z",
+      "updatedAt": "2025-09-12T21:18:34.699Z"
+    },
+    {
+      "id": "68c48e2a6ab605f4f85492ae",
+      "title": "Street Light Not Working",
+      "description": "Street lights have been non-functional for the past week, causing safety concerns at night.",
+      "category": "Lighting",
+      "status": "in-progress",
+      "priority": "medium",
+      "location": {
+        "address": "Park Street, Sector 5",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "coordinates": {
+          "lat": 19.0825,
+          "lng": 72.8812
+        }
+      },
+      "reportedBy": "Rahul Kumar (rahul@example.com)",
+      "upvotes": 0,
+      "comments": 0,
+      "createdAt": "2025-09-12T21:18:34.704Z",
+      "updatedAt": "2025-09-12T21:18:34.705Z"
+    },
+    {
+      "id": "68c48e2a6ab605f4f85492b0",
+      "title": "Garbage Accumulation",
+      "description": "Garbage has not been collected for several days, causing health hazards and bad smell.",
+      "category": "Waste Management",
+      "status": "pending",
+      "priority": "high",
+      "location": {
+        "address": "Green Colony, Block B",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "coordinates": {
+          "lat": 19.089,
+          "lng": 72.8856
+        }
+      },
+      "reportedBy": "Rahul Kumar (rahul@example.com)",
+      "upvotes": 0,
+      "comments": 0,
+      "createdAt": "2025-09-12T21:18:34.708Z",
+      "updatedAt": "2025-09-12T21:18:34.709Z"
+    }
+  ]
+}

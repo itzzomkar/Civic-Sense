@@ -1,0 +1,142 @@
+/* Color Scheme Definitions */
+:root {
+  /* Default Blue Theme */
+  --primary: 221 83% 53%;
+  --primary-foreground: 210 40% 98%;
+  --civic-gradient-start: #3b82f6;
+  --civic-gradient-end: #2563eb;
+}
+
+/* Blue Color Scheme */
+[data-color-scheme="blue"] {
+  --primary: 221 83% 53%;
+  --primary-foreground: 210 40% 98%;
+  --civic-gradient-start: #3b82f6;
+  --civic-gradient-end: #2563eb;
+  --accent: 217 91% 60%;
+  --accent-foreground: 222 47% 11%;
+}
+
+/* Green Color Scheme */
+[data-color-scheme="green"] {
+  --primary: 142 76% 36%;
+  --primary-foreground: 144 57% 96%;
+  --civic-gradient-start: #10b981;
+  --civic-gradient-end: #059669;
+  --accent: 142 76% 36%;
+  --accent-foreground: 144 57% 96%;
+}
+
+/* Purple Color Scheme */
+[data-color-scheme="purple"] {
+  --primary: 262 80% 50%;
+  --primary-foreground: 270 60% 98%;
+  --civic-gradient-start: #8b5cf6;
+  --civic-gradient-end: #7c3aed;
+  --accent: 262 80% 50%;
+  --accent-foreground: 270 60% 98%;
+}
+
+/* Orange Color Scheme */
+[data-color-scheme="orange"] {
+  --primary: 24 95% 53%;
+  --primary-foreground: 25 85% 98%;
+  --civic-gradient-start: #fb923c;
+  --civic-gradient-end: #f97316;
+  --accent: 24 95% 53%;
+  --accent-foreground: 25 85% 98%;
+}
+
+/* Dark Mode Overrides */
+.dark {
+  --primary-foreground: 210 40% 98%;
+  --accent-foreground: 210 40% 98%;
+}
+
+/* Civic Gradient Classes */
+.civic-gradient {
+  background: linear-gradient(135deg, var(--civic-gradient-start), var(--civic-gradient-end));
+}
+
+.civic-gradient.bg-clip-text {
+  background: linear-gradient(135deg, var(--civic-gradient-start), var(--civic-gradient-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Button Variant for Civic Theme */
+.btn-civic {
+  background: linear-gradient(135deg, var(--civic-gradient-start), var(--civic-gradient-end));
+  color: white;
+}
+
+.btn-civic:hover {
+  opacity: 0.9;
+}
+
+/* Compact Mode */
+.compact {
+  --spacing-unit: 0.75;
+}
+
+.compact .p-4 {
+  padding: calc(1rem * var(--spacing-unit));
+}
+
+.compact .p-6 {
+  padding: calc(1.5rem * var(--spacing-unit));
+}
+
+.compact .space-y-4 > * + * {
+  margin-top: calc(1rem * var(--spacing-unit));
+}
+
+.compact .space-y-6 > * + * {
+  margin-top: calc(1.5rem * var(--spacing-unit));
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  --foreground: 0 0% 0%;
+  --background: 0 0% 100%;
+  --border: 0 0% 20%;
+  --muted-foreground: 0 0% 20%;
+}
+
+.high-contrast.dark {
+  --foreground: 0 0% 100%;
+  --background: 0 0% 0%;
+  --border: 0 0% 80%;
+  --muted-foreground: 0 0% 80%;
+}
+
+/* Reduce Motion */
+.reduce-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* Font Size Variations */
+html[style*="font-size: 14px"] {
+  --font-scale: 0.875;
+}
+
+html[style*="font-size: 18px"] {
+  --font-scale: 1.125;
+}
+
+/* Success Gradient */
+.success-gradient {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+/* Warning Gradient */
+.warning-gradient {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+/* Destructive Gradient */
+.destructive-gradient {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Test User",
+    "email": "test3476@example.com",
+    "password": "$2b$10$cA63Z1kgTBN49nVjq0cLNeDsxUHV9XDlyjVdzFb2rzGavZ41zGXBC",
+    "role": "citizen",
+    "civicPoints": 0,
+    "stats": {
+      "totalReports": 0,
+      "resolvedReports": 0,
+      "pendingReports": 0,
+      "upvotesReceived": 0
+    },
+    "_id": "mfhd1vxkwzh6rfgd3o",
+    "createdAt": "2025-09-12T21:39:53.192Z",
+    "updatedAt": "2025-09-12T21:39:53.192Z"
+  }
+]

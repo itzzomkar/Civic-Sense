@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Map Test - Smart India Hackathon 2025</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #1a1a1a;
+            color: white;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #3b82f6;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        #map {
+            height: 600px;
+            border-radius: 8px;
+            border: 2px solid #374151;
+        }
+        .info {
+            background: #374151;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            background: #065f46;
+            border-left: 4px solid #10b981;
+        }
+        .error {
+            background: #7f1d1d;
+            border-left-color: #ef4444;
+        }
+        .loading {
+            background: #1e3a8a;
+            border-left-color: #3b82f6;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗺️ Map Debug Test - Urban Guardians</h1>
+        
+        <div class="info">
+            <h3>📊 Debug Information</h3>
+            <div id="debug-info">
+                <div class="status loading">Loading map components...</div>
+            </div>
+        </div>
+
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    
+    <script>
+        const debugInfo = document.getElementById('debug-info');
+        
+        function addStatus(message, type = 'status') {
+            const div = document.createElement('div');
+            div.className = `status ${type}`;
+            div.innerHTML = message;
+            debugInfo.appendChild(div);
+        }
+
+        // Clear loading status
+        debugInfo.innerHTML = '';
+        
+        try {
+            addStatus('✅ Leaflet library loaded successfully');
+            
+            // Initialize map
+            const map = L.map('map').setView([19.0760, 72.8777], 11);
+            addStatus('✅ Map instance created');
+
+            // Add tile layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                maxZoom: 18
+            }).addTo(map);
+            addStatus('✅ Map tiles loaded');
+
+            // Sample civic issues data (similar to your demo data)
+            const sampleReports = [
+                {
+                    title: "Large Pothole on Western Express Highway",
+                    category: "Road Maintenance",
+                    status: "in-progress",
+                    location: { 
+                        address: "Western Express Highway, Bandra, Mumbai",
+                        coordinates: { lat: 19.0596, lng: 72.8295 }
+                    },
+                    upvotes: [1, 2, 3]
+                },
+                {
+                    title: "Broken Street Light on Main Road",
+                    category: "Street Lighting",
+                    status: "pending",
+                    location: { 
+                        address: "Main Road, Dharavi, Mumbai",
+                        coordinates: { lat: 19.0428, lng: 72.8417 }
+                    },
+                    upvotes: [1, 2]
+                },
+                {
+                    title: "Water Supply Issue in Residential Area",
+                    category: "Water Management",
+                    status: "resolved",
+                    location: { 
+                        address: "Residential Colony, Andheri, Mumbai",
+                        coordinates: { lat: 19.1136, lng: 72.8697 }
+                    },
+                    upvotes: [1, 2, 3, 4, 5]
+                }
+            ];
+
+            // Add markers for each report
+            let markerCount = 0;
+            sampleReports.forEach((report) => {
+                const lat = report.location.coordinates.lat;
+                const lng = report.location.coordinates.lng;
+                
+                if (lat && lng) {
+                    const marker = L.marker([lat, lng]).addTo(map);
+                    
+                    const popupContent = `
+                        <div style="max-width: 250px;">
+                            <h4 style="margin: 0 0 8px 0; font-size: 14px; font-weight: 600;">${report.title}</h4>
+                            <p style="margin: 0 0 8px 0; font-size: 12px; color: #666;">${report.category}</p>
+                            <p style="margin: 0 0 8px 0; font-size: 11px; color: #888;">
+                                📍 ${report.location.address}
+                            </p>
+                            <div style="display: flex; gap: 8px; align-items: center;">
+                                <span style="background: ${
+                                    report.status === 'resolved' ? '#10b981' : 
+                                    report.status === 'in-progress' ? '#3b82f6' : 
+                                    '#f59e0b'
+                                }; color: white; padding: 2px 8px; border-radius: 12px; font-size: 10px;">
+                                    ${report.status.toUpperCase().replace('-', ' ')}
+                                </span>
+                                <span style="font-size: 11px; color: #666;">👍 ${report.upvotes.length}</span>
+                            </div>
+                        </div>
+                    `;
+                    
+                    marker.bindPopup(popupContent);
+                    markerCount++;
+                }
+            });
+
+            addStatus(`✅ Added ${markerCount} markers successfully`);
+            addStatus('🎯 Map initialization complete!');
+            addStatus('🏆 Smart India Hackathon 2025 - Urban Guardians Map Working!');
+            
+        } catch (error) {
+            console.error('Map error:', error);
+            addStatus(`❌ Map initialization failed: ${error.message}`, 'error');
+        }
+    </script>
+</body>
+</html>

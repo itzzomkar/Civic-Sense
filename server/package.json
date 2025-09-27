@@ -1,0 +1,11 @@
+{
+  "name": "urban-guardians-server",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "description": "Backend server for Urban Guardians civic reporting platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  }
+}
